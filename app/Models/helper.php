@@ -72,7 +72,7 @@ class helper
             }
 
         }else{
-            $access_key = 'ed09e98ccc0c3f163c4d575a764f3629';
+            $access_key = env("ACCESS_KEY_IPSTCK", "");
             $ch = curl_init('http://api.ipstack.com/'.$ip.'?access_key='.$access_key.'');
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             $json = curl_exec($ch);
